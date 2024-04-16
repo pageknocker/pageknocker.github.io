@@ -49,7 +49,7 @@ a:hover {
 #footer {
   margin-top: 4em;
   padding: 4em 0;
-  background-color: #343A40;
+  background-color: #210d47;
   color: white;
 }
 
@@ -94,4 +94,15 @@ a:hover {
   text-align: center;
   font-size: 0.85em;
   margin-top: 20px;
+}
+
+#abstract-text {
+  font-size: 19px;
+}
+
+#video{
+  border-radius: 12px;
+  overflow: hidden;
+  /* -webkit-transform: translateZ(0); */
+  box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
 }

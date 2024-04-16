@@ -6,62 +6,61 @@ const DATA = {
         FOOTER_LOGO_SIZE: "240px",
     },
     HEAD: {
-        FAVICON_SRC: "img/logo_dummy.png",
-        PROJECT_TITLE: "Project Title",
+        FAVICON_SRC: "img/favicon.ico",
+        PROJECT_TITLE: "Knocking on Admin’s Door: <br> Protecting Critical Web Applications with Deception",
         PROJECT_SUBTITLE: {
-            "name": "XXX Conference,  20XX",
+            "name": "DIMVA,  2024",
             "url": "#",
         },
-        AUTHOR_NAME: "Ricardo Garcia",
-        VIDEO_SRC: "video/dummy_video.mp4",
+        AUTHOR_NAME: "Billy Tsouvalas",
+        VIDEO_SRC: "video/pageknocker_demo_1080_camera_ready.mp4",
     },
     ABSTRACT: {
         TEXT: [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia.",
-            "Nullam rutrum leo quis purus cursus fermentum. Vivamus nec iaculis mi. Suspendisse pharetra eleifend turpis ut dictum. Vivamus nisi tellus, volutpat nec quam sit amet, ornare facilisis est. Fusce semper ultrices aliquet. Morbi sagittis eros ac dui rhoncus, sit amet semper purus varius. Duis finibus turpis orci, eu auctor nunc maximus nec. Curabitur aliquet tincidunt mauris faucibus iaculis. Donec sem orci, placerat quis tempor id, fringilla eu dolor. Etiam ultrices maximus lacus, et suscipit erat suscipit a. Proin est erat, maximus venenatis vestibulum vel, sagittis ac nisl. Proin fermentum ullamcorper tortor, eu rutrum libero mattis eu.",
-            "Pellentesque gravida augue augue, ac posuere lacus accumsan in. Suspendisse vel magna accumsan, porta lorem sed, eleifend massa. Proin auctor euismod ornare. Fusce convallis volutpat magna non laoreet. Quisque nibh nunc, tempus ac lacinia vel, condimentum sed est. Maecenas ultrices nunc eget est interdum semper. Nulla eu varius mi, non euismod enim. Mauris mollis urna ut diam fringilla rhoncus. Nam efficitur sem vel ultrices tempor. Vestibulum hendrerit, nulla vitae tempus ultricies, magna nulla pulvinar dui, eget accumsan ipsum arcu et lacus. Integer vel fringilla tellus. Donec pellentesque blandit elit a luctus."
+            "In this paper, we introduce PageKnocker, a deception-based supplementary authentication mechanism, aimed primarily at protecting the public-facing authentication endpoints of critical web applications. PageKnocker is inspired by the network security concept of port knocking, and uses the requests to the web application as a means of authentication for the login page. Specifically, the authentication is successful (i.e. the user gets to access the login page of a web application), if the user's request sequence matches their personal predefined request sequence. In this manner, PageKnocker offers web application administrators the comparative advantage of knowing the nature of a visitor even before that visitor sends the first set of credentials.<br><br>Alongside PageKnocker, we introduce two deceptive login environments, one overtly deceptive and one clandestine, towards which we direct any unauthenticated user attempting to reach the real login page. To evaluate the security and usability of page knocks, we deploy PageKnocker-protected honeypots in the wild and perform a separate user study, showing that PageKnocker can resist tens of thousands of brute-forcing bots, while remaining usable and intuitive."
         ],
         OVERVIEW: {
             "src": "img/overview_dummy.png",
-            "legend": "Dummy overview of our method.",
+            //"legend": "Dummy overview of our method.",
+            "legend" : "",
         }
     },
     CONTENT: [ // If you want to add other sections, add them with their title (used for navigation) and the html code of the section
-        {
-            "name": "Section 1",
-            "html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia.",
-        },
-        {
-            "name": "Section 2",
-            "html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia.",
-        },
+        // {
+        //     "name": "Section 1",
+        //     "html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia.",
+        // },
+        // {
+        //     "name": "Section 2",
+        //     "html": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi viverra finibus quam, nec ornare mi posuere id. Nullam vitae efficitur neque. Maecenas rutrum nunc sit amet rhoncus iaculis. Pellentesque rutrum at nisl vitae dapibus. Maecenas auctor faucibus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum a leo porttitor, mollis diam id, porta odio. Donec convallis porttitor lectus sed fringilla. Nulla facilisi. Curabitur tincidunt turpis sit amet leo lobortis lacinia.",
+        // },
     ],
     CONTRIBUTORS: [
         {
-            "name": "Contributor 1",
-            "img": "img/contributor_dummy.png",
+            "name": "Billy Tsouvalas",
+            "img": "img/TsouvalasCircleCropped.png",
             "url": "#"
         },
         {
-            "name": "Contributor 2",
-            "img": "img/contributor_dummy.png",
+            "name": "Nick Nikiforakis",
+            "img": "img/nick_new_small_cropped2.jpg",
             "url": "#"
         },
-        {
-            "name": "Contributor 3",
-            "img": "img/contributor_dummy.png",
-            "url": "#"
-        },
-        {
-            "name": "Contributor 4",
-            "img": "img/contributor_dummy.png",
-            "url": "#"
-        },
-        {
-            "name": "Contributor 5",
-            "img": "img/contributor_dummy.png",
-            "url": "#"
-        },
+        // {
+        //     "name": "Contributor 3",
+        //     "img": "img/contributor_dummy.png",
+        //     "url": "#"
+        // },
+        // {
+        //     "name": "Contributor 4",
+        //     "img": "img/contributor_dummy.png",
+        //     "url": "#"
+        // },
+        // {
+        //     "name": "Contributor 5",
+        //     "img": "img/contributor_dummy.png",
+        //     "url": "#"
+        // },
     ],
     LINKS: [
         {
@@ -84,36 +83,35 @@ const DATA = {
                     "url": "#",
                     "icon": "img/GitHub-Mark-Light-32px.png"
                 },
-                {
-                    "name": "Repository 2",
-                    "url": "#",
-                    "icon": "img/GitHub-Mark-Light-32px.png"
-                },
+                // {
+                //     "name": "Repository 2",
+                //     "url": "#",
+                //     "icon": "img/GitHub-Mark-Light-32px.png"
+                // },
             ],
         },
     ],
     CITATION: ` \
-        @article{articlename,
-            author    = {Author1 and Author2 and Author3 and Author4 and Author5},
-            title     = {Paper Title},
-            journal   = {arXiv preprint arXiv:TBD},
-            year      = {20XX}
-        }
-    `,
+    @article{tsouvalas2024knocking,
+        author    = {Tsouvalas, Billy and Nikiforakis, Nick},
+        title     = {Knocking on Admin's Door: Protecting Critical Web Applications with Deception},
+        journal   = {International Conference on Detection of Intrusions and Malware, and Vulnerability<br>\t\t\tAssessment (DIMVA)},
+        year      = {2024}
+    }`,
     FOOTER: {
         LOGOS: [
             {
-                "name": "University 1",
-                "src": "img/logo_dummy.png",
+                "name": "PragSec Lab",
+                "src": "img/pragsec.png",
                 "url": "#"
             },
             {
-                "name": "University 2",
-                "src": "img/logo_dummy.png",
+                "name": "Stony Brook University",
+                "src": "img/SBU_stack_white_300ppi.png",
                 "url": "#"
             },
         ],
-        COPYRIGHT: `Copyright Owner 20XX`
+        COPYRIGHT: `Copyright Copyright PragSec Lab 2024`
     },
 }
 // ===== END CUSTOM DATA =====
@@ -178,7 +176,10 @@ function displayNav() {
 
 /* Video section */
 function displayVideo() {
-    document.getElementById("video").innerHTML = `<iframe class="embed-responsive-item" src=${DATA.HEAD.VIDEO_SRC}></iframe>`;
+    document.getElementById("video").innerHTML = `<video class="embed-responsive-item" controls autoplay loop muted style="min-width:100%;"><source src=${DATA.HEAD.VIDEO_SRC} type="video/mp4"></video>`;
+    // let vid_element = document.getElementById("video");
+    // vid_element.loop = true;
+    // vid_element.load();
 }
 
 /* Abstract section */
@@ -276,7 +277,7 @@ function displayLinks() {
 
 /* Citation */
 function displayCitation() {
-    htmlContent = `<code>${DATA.CITATION}</code>`;
+    htmlContent = `<code style="font-size:16px;">${DATA.CITATION}</code>`;
     document.getElementsByClassName("citation")[0].innerHTML = htmlContent;
 }
 
@@ -311,9 +312,9 @@ function displayFooter() {
 function displayPage() {
     displayTitle();
     displayNav();
-    displayVideo();
     displayAbstract();
-    displayOverview();
+    displayVideo();
+    //displayOverview();
     displayContentSections();
     displayContributors();
     displayLinks();
