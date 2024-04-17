@@ -106,3 +106,10 @@ a:hover {
   /* -webkit-transform: translateZ(0); */
   box-shadow: 0 19px 51px 0 rgba(0,0,0,0.16), 0 14px 19px 0 rgba(0,0,0,0.07);
 }
+
+.embed-responsive{
+  width:100%;
+  text-align:left;
+  float:left;
+
+}

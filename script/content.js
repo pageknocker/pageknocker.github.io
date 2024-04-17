@@ -39,12 +39,12 @@ const DATA = {
         {
             "name": "Billy Tsouvalas",
             "img": "img/TsouvalasCircleCropped.png",
-            "url": "#"
+            "url": "https://www.tsouvalas.xyz/"
         },
         {
             "name": "Nick Nikiforakis",
             "img": "img/nick_new_small_cropped2.jpg",
-            "url": "#"
+            "url": "https://www.securitee.org/"
         },
         // {
         //     "name": "Contributor 3",
@@ -68,7 +68,7 @@ const DATA = {
             "icon": "img/paper.svg",
             "links": [
                 {
-                    "name": "arXiv",
+                    "name": "PDF",
                     "url": "#",
                     "icon": "img/paper_copy.svg"
                 },
@@ -79,7 +79,7 @@ const DATA = {
             "icon": "img/code.svg",
             "links": [
                 {
-                    "name": "Repository 1",
+                    "name": "Repository",
                     "url": "#",
                     "icon": "img/GitHub-Mark-Light-32px.png"
                 },
@@ -176,7 +176,7 @@ function displayNav() {
 
 /* Video section */
 function displayVideo() {
-    document.getElementById("video").innerHTML = `<video class="embed-responsive-item" controls autoplay loop muted style="min-width:100%;"><source src=${DATA.HEAD.VIDEO_SRC} type="video/mp4"></video>`;
+    document.getElementById("video").innerHTML = `<video class="embed-responsive-item" controls autoplay loop muted><source src=${DATA.HEAD.VIDEO_SRC} type="video/mp4"></video>`;
     // let vid_element = document.getElementById("video");
     // vid_element.loop = true;
     // vid_element.load();
@@ -230,11 +230,14 @@ function displayContributorsRow(contributorsInRow) {
     let htmlContent = `<div class="row text-center">` + addPadding(contributorsInRow.length);
 
     for (const contributor of contributorsInRow) {
-        const htmlImg = `<img class="rounded-circle" src=${contributor.img} alt=${contributor.name} width=${DATA.STYLE.CONTRIBUTOR_IMAGE_SIZE} height=${DATA.STYLE.CONTRIBUTOR_IMAGE_SIZE} />`;
+        const htmlImg = `<br><br><img class="rounded-circle" src=${contributor.img} alt=${contributor.name} width=${DATA.STYLE.CONTRIBUTOR_IMAGE_SIZE} height=${DATA.STYLE.CONTRIBUTOR_IMAGE_SIZE} />`;
         htmlContent +=
             `<div class="col-lg-${Math.floor(NB_COLS / DATA.STYLE.NB_MAX_CONTRIBUTORS_PER_LINE)}">
                 ${link(contributor.url, htmlImg)}
+                <br>
                 <h4>${link(contributor.url, contributor.name)}</h4>
+                <br>
+                <br>
             </div>`;
     }
     htmlContent += addPadding(contributorsInRow.length) + `</div>`;
@@ -257,14 +260,16 @@ function displayContributors() {
 /* Links section */
 function formatLink(_link) {
     return `<div class="col-sm text-center">
-            ${link(_link.url, `<img src=${_link.icon} width="20px"> ${_link.name}`, `role="button" class="btn btn-dark"`)}
+            ${link(_link.url, `<img src=${_link.icon} width="20px"> ${_link.name}`, `role="button" class="btn btn-dark"  style="background-color:#210d47;"`)}
         </div>`;
 }
 
 function formatLinkGroup(group) {
     return `<div class="col-sm text-center">
+                <br>
+                <br>
                 <img src=${group.icon} />
-                <h4>${group.title}</h4>
+                <h4  style="color:#210d47;">${group.title}</h4>
                 ${group.links.map(link => formatLink(link)).join("")}
             </div>`;
 }
