@@ -7,7 +7,7 @@ const DATA = {
     },
     HEAD: {
         FAVICON_SRC: "img/favicon.ico",
-        PROJECT_TITLE: "Knocking on Admin’s Door: <br> Protecting Critical Web Applications with Deception",
+        PROJECT_TITLE: "Knocking on Admin’s Door:<br> Protecting Critical Web Applications with Deception",
         PROJECT_SUBTITLE: {
             "name": "DIMVA,  2024",
             "url": "#",
@@ -151,7 +151,7 @@ function displayTitle() {
     let oneLineTitle = DATA.HEAD.PROJECT_TITLE;
     const remove = ["<br>", "<br/>", "<br />"];
     for (const val of remove) {
-        oneLineTitle = oneLineTitle.replace(val, " ");
+        oneLineTitle = oneLineTitle.replace(val, "");
     }
     document.head.querySelector("title").innerHTML = oneLineTitle;
     document.head.querySelector("meta[name='author']").content = DATA.HEAD.AUTHOR_NAME;
