@@ -69,7 +69,7 @@ const DATA = {
             "links": [
                 {
                     "name": "PDF",
-                    "url": "#",
+                    "url": "../pageknocker.pdf",
                     "icon": "img/paper_copy.svg"
                 },
             ],
