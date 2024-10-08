@@ -111,7 +111,7 @@ const DATA = {
                 "url": "#"
             },
         ],
-        COPYRIGHT: `Copyright Copyright PragSec Lab 2024`
+        COPYRIGHT: `Copyright PragSec Lab 2024`
     },
 }
 // ===== END CUSTOM DATA =====
